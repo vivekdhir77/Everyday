@@ -8,9 +8,10 @@ num2= 5/2;//2
 num3= 5.0/2;
 num4= 5/2.0;//2.5
 
+printf("arthmetic")
 
 printf("%f\n",num1);
 printf("%f\n",num2);
 printf("%f\n",num3);
 printf("%f\n",num4);
-}    
+}
