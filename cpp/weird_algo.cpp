@@ -24,6 +24,4 @@ int main()
             x=false;
         }
     }
-    
-
 }
