@@ -2,6 +2,18 @@
 
 using std::cout;
 
+int prime_no(int);
+int prime_factors(int);
+
+int main()
+{   
+    int n;
+    std::cin >> n;
+    prime_factors(n);
+    return 0;
+}
+
+
 int prime_no(int num)
 {
     int count=0;
@@ -14,7 +26,7 @@ int prime_no(int num)
     }
     if(count==0)
     {
-        cout << num<<" ";
+        cout <<num<<" ";
     }
     return 0;
 
@@ -31,12 +43,4 @@ int prime_factors(int no)
         }
     }
 return 0;
-}
-
-int main()
-{   
-    int n;
-    std::cin >> n;
-    prime_factors(n);
-    return 0;
 }
