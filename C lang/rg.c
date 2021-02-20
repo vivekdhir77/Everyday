@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -18,5 +18,15 @@ printf("%f\n",num3);
 printf("%f\n",num4);
 printf("%f\n",num5);
 
+} */
+#include <stdio.h>
+
+int main()
+{
+    double n ;
+    float x;
+    scanf("%f",&x);
+    n= (((1+x)*(1+x)-8))/(11-(x*x));
+    printf("value = %lf", n);
 }
 
