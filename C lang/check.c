@@ -5,7 +5,7 @@ int a,b,c;
  a=2;
 b=3;
 c=1;
- c==a+b;
+printf("%d\n",(c == b));
 return 0;
 }
  
