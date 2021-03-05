@@ -1,9 +1,12 @@
 #include <iostream>
 
 using std::cout;
+using std::cin;
 
 int main()
-{
-    cout<<"hello World "<<std::endl;
-    return 0;
+{   int n;
+    printf("Enter a no :");
+    scanf("%d",&n);
+    char a = n;
+    std:;cout << ( char )a << std::endl;
 }
