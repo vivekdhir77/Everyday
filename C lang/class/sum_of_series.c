@@ -1,14 +1,5 @@
 #include<stdio.h>
-int factorial(int N)
-{
-    long long int fact=1, i=1;
-    for (;i<=N;i++ )
-    {fact*=i;
-    }
-    return fact;
-}
-
-//Your program will be evaluated by this main method and several test cases.
+int factorial(int);
 int main()
 {
     #ifndef ONLINE_JUDGE
@@ -23,4 +14,12 @@ int main()
         sum+= i/factorial(i);
     }
     printf("%.3lf",sum);
+}
+int factorial(int N)
+{
+    long long int fact=1, i=1;
+    for (;i<=N;i++ )
+    {fact*=i;
+    }
+    return fact;
 }

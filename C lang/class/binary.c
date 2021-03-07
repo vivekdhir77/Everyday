@@ -1,5 +1,6 @@
 #include<stdio.h>
-void DEC_to_Bin(long int);
+void DEC_to_Bin(long int);//using arrays
+void Dec_to_bin_normal(long int);//without using arrays
 int main(){
     #ifndef ONLINE_JUDGE
     freopen("inp.txt","r",stdin);
@@ -7,9 +8,9 @@ int main(){
     #endif
     long int N;
     scanf("%ld",&N);
-    DEC_to_Bin(N);
+    Dec_to_bin_normal(N);
 }
-void DEC_to_Bin(long int dec){
+void DEC_to_Bin_array(long int dec){
     if (dec!=0)
         {int binary[dec], i=0, j;
         while(dec!=0){
@@ -18,4 +19,12 @@ void DEC_to_Bin(long int dec){
         for(j = i - 1; j >= 0; j--)
             printf("%d", binary[j]);}
      else printf("0");
+}
+void Dec_to_bin_normal(long int dec){
+    long int pow=1, binary=0;
+    for( ;dec>0 ; dec/=2){
+        binary= binary + (pow)*(dec%2);
+        pow=pow*10;
+    }
+    printf("%ld", binary);
 }

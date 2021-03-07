@@ -1,4 +1,15 @@
 #include<stdio.h>
+int solution(long long int);
+int main()
+{
+    #ifndef ONLINE_JUDGE
+    freopen("inp.txt","r",stdin);
+    freopen("out.txt","w",stdout);
+    #endif
+    long long int N;
+    scanf("%lld",&N);
+    printf("%d",solution(N));
+}
 int solution(long long int N)
 {
    long long int sum=0;
@@ -9,16 +20,4 @@ int solution(long long int N)
     if (sum == N) return 1;
     else return 0;
     
-}
-
-//Your program will be evaluated by this main method and several test cases.
-int main()
-{
-    #ifndef ONLINE_JUDGE
-    freopen("inp.txt","r",stdin);
-    freopen("out.txt","w",stdout);
-    #endif
-    long long int N;
-    scanf("%lld",&N);
-    printf("%d",solution(N));
 }

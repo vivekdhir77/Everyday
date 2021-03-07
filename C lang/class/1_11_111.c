@@ -1,4 +1,15 @@
 #include<stdio.h>
+long solution(int);
+int main()
+{
+    #ifndef ONLINE_JUDGE
+    freopen("inp.txt","r",stdin);
+    freopen("out.txt","w",stdout);
+    #endif
+    int N;
+    scanf("%d",&N);
+    printf("%ld",solution(N));
+}
 long solution(int N)
 {
     long long int num = 1;
@@ -10,15 +21,4 @@ long solution(int N)
     num = num + dec;
     dec= dec *10;}
     return sum;
-}
-
-int main()
-{
-    #ifndef ONLINE_JUDGE
-    freopen("inp.txt","r",stdin);
-    freopen("out.txt","w",stdout);
-    #endif
-    int N;
-    scanf("%d",&N);
-    printf("%ld",solution(N));
 }
