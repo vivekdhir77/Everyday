@@ -12,9 +12,11 @@ int main()
 {
     ll a,b;
     cin>>a>>b;
-    int diff=0;
+    ll diff=0;
     diff= max(a,b) - min(a,b);
-    if (diff !=0)
+    if (diff%10==0 || diff%10==1)
+    diff+=1;
+    else
     diff-=1;
-    cout<<diff;
+    cout<<diff<<endl;
 }

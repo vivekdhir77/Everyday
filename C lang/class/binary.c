@@ -1,25 +1,30 @@
 #include<stdio.h>
-void DEC_to_Bin(long int);//using arrays
-void Dec_to_bin_normal(long int);//without using arrays
-int main(){
-    #ifndef ONLINE_JUDGE
-    freopen("inp.txt","r",stdin);
-    freopen("out.txt","w",stdout);
-    #endif
+struct binary
+{
+    int bin[3];
+}bin;
+int DEC_to_Bin_array(long int *dec){
+    
+    int i=0, j;
+    if (*dec!=0)
+        {
+        while(*dec!=0){
+            bin.bin[i] = *dec % 2;
+            *dec = *dec / 2; i++;
+            printf("%ld\n",*dec);}
+        }
+    else printf("0");
+    return i;
+}//using arrays
+int main(){   
     long int N;
     scanf("%ld",&N);
-    Dec_to_bin_normal(N);
+    int i = DEC_to_Bin_array(&N);
+    for(int j = i - 1; j >= 0; j--)
+        printf("%d", bin.bin[j]);
+    printf("\n%ld",sizeof(bin.bin));
 }
-void DEC_to_Bin_array(long int dec){
-    if (dec!=0)
-        {int binary[dec], i=0, j;
-        while(dec!=0){
-            binary[i] = dec % 2;
-            dec = dec / 2; i++;}
-        for(j = i - 1; j >= 0; j--)
-            printf("%d", binary[j]);}
-     else printf("0");
-}
+
 void Dec_to_bin_normal(long int dec){
     long int pow=1, binary=0;
     for( ;dec>0 ; dec/=2){

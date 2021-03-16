@@ -16,4 +16,4 @@ void DEC_to_Bin(long int dec){
         for(j = i - 1; j >= 0; j--)
             printf("%d", binary[j]);}
      else printf("0");
-}
+}//
