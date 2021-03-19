@@ -1,7 +1,9 @@
-//https://codeforces.com/problemset/problem/58/A
+//https://cses.fi/problemset/task/1071
 #include<iostream>
 #include<cmath>
+#include<string>
 #include<vector>
+#include<algorithm>
 #define max(a,b) (a>b?a:b)
 #define min(a,b) (a>b?b:a)
 #define FA(i,start,end) for(int i=start; i<end; i++)
@@ -13,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    int n; cin>>n;
+  
     
 
 }

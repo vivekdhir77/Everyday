@@ -1,8 +1,12 @@
 #include<stdio.h>
-#include<math.h>
+#include<string.h>
 int main()
 {
-    int n= 17;
-    int num= (int)log10 (n) +1;
-    printf("%d",num);
+    char ch[10]={'1','2','3','\0','5','6'};
+    printf("using sizeof() %lu\n",sizeof(ch)/sizeof(char));
+    printf("using strlen() %lu\n",strlen(ch));
 }
+
+//output:
+//using sizeof() 10
+//using strlen() 3
