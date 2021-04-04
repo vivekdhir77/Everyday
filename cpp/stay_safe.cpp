@@ -9,18 +9,16 @@
 #define FD(i,start,end) for(int i=start; i>=end; i--)
 typedef long int li;
 typedef long long int ll;
+
 using namespace std;
 
 int main()
 {
-    char a[]={'1','2','3','4','5','6'};
-    char *ch= &a[0];
-    //int *i=&a[0];
-    printf("%p\n",ch);
-    printf("%p\n",(++ch));
-    printf("%p\n",(++ch));
-    //printf("%p",*i<<")\n";
-
-
-
+    string s;
+    cin>>s;
+    int a=s.find("sanitize");
+    if (a!=-1)
+    printf("Safe");
+    else
+    printf("Not safe");
 }

@@ -24,15 +24,19 @@ ll collatz(ll n)
 typedef long long int ll;
 int main()
 {
-    ll n=0,c=1;
+    ll n=42,c=1;
     scanf("%lld",&n);
     while(n!=1)
     {
-        if (n%2==0) {
-            n=n/2;c++;
+        if (n%2==0) 
+        {
+            n=n/2;
+            c++;
         }
         else {
-            n=3*n+1;c++;}
+            n=3*n+1;
+            c++;
+        }
     }
     printf("%lld",c);
 }

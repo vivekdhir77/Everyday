@@ -70,7 +70,7 @@ typedef long long int ll;
 
 using namespace std;
 
-void findAndReplaceAll(string & data, string toSearch, string replaceStr)
+void findAndReplaceAll(string &data, string toSearch, string replaceStr)
 {
     size_t pos = data.find(toSearch);
     while( pos != string::npos)
