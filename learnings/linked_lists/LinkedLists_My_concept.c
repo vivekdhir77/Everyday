@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include<stdlib.h>
 
-
 struct node
 {
     int data;
@@ -76,6 +75,67 @@ int input)
     return head;
 }
 
+void Delete_list(struct node *head)
+{
+    struct node* ptr;
+    while(head!=NULL)
+    {
+        ptr = head;
+        head = head->next;
+        free(ptr);
+    }
+}
+
+struct node* First_Node_deltion(struct node *head)
+{
+    struct node* ptr = head;
+    head = head->next;
+    free(ptr);
+    return head;
+}
+
+struct node* Delete_AtIndex(struct node *head, int index)
+{
+    struct node* p= head;
+    struct node* q= head->next;
+    for(int i=0; i<index-1; i++)
+    {
+        p = p->next;
+        q= q->next; 
+    }
+    p->next = q ->next;
+    free(q);
+    return head;
+    
+}
+
+void Delete_lastElement(struct node* head)
+{
+    struct node* a= head;
+    struct node* b= head->next;
+    while(q->next!=NULL)
+    {
+        a=a->next;
+        b=b->next;
+    }
+    a->next=NULL;
+    free(b);
+}
+
+struct node* Delete_A_given_val(struct node *head, 
+                            int val)
+{
+    struct node* p = head;
+    while(p->next != NULL)
+    {
+        if (p->data == val)
+        {
+            
+        }
+    }
+    
+}
+
 int main()
 {
     struct node *head;
@@ -104,7 +164,11 @@ int main()
     //head = insert_Atbegining(head, 99);
     //head = insert_Atbetween(head, 1, 99);
     //head = insertion_AtEnd(head, 77);
-    head=insertion_AtGivenNode(head, second,62);
-    printf("\nafter insertion\n");
+    //head=insertion_AtGivenNode(head, second,62);
+    //head= First_Node_deltion(head);
+    Delete_lastElement(head);
+    printf("\nafter deleting 1st node\n");
     traversal(head);
+    
+    Delete_list(head);
 }
