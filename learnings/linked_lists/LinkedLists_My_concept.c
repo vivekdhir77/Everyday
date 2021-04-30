@@ -113,7 +113,7 @@ void Delete_lastElement(struct node* head)
 {
     struct node* a= head;
     struct node* b= head->next;
-    while(q->next!=NULL)
+    while(b->next!=NULL)
     {
         a=a->next;
         b=b->next;
