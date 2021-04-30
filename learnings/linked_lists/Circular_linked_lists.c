@@ -15,7 +15,7 @@ struct node* Add_Beg(struct node* head, int val)
     return temp;
 }
 
-void Add_Between(struct node* head, int val)
+void Add_last(struct node* head, int val)
 {
     struct node* p= head;
     struct node* temp;
@@ -40,7 +40,7 @@ void traversal(struct node* head)
     }
     printf("%d\n", p->data);
 }
-struct node* last(struct node* head)
+struct node* last2nd(struct node* head)
 {
     struct node* p=head;
     while(p->next!=head)
@@ -60,10 +60,10 @@ scanf("%d", &temp);
 head = Add_Beg(head, temp);
 for(int i = 1; i < size; i++){//scanning of array is done here.
     scanf("%d", &temp);
-    Add_Between(head, temp);
+    Add_last(head, temp);
 }
 for(int i = 0; i < size; i++){
-    head = last(head);//Making the last element comes first and 
+    head = last2nd(head);//Making the last element comes first and 
     //all the other elements shift to the right by one place.
     traversal(head);//printing the array
   }	
